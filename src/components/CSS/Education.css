@@ -1,0 +1,37 @@
+* {
+    --ruler: 16px;
+    --color-shadow: #0c0521;;
+    --color-white: #372d97;
+}
+
+.education-info {
+    margin-top: 5vh;
+    width: 60vh;
+    height: 50vh;
+    
+}
+
+.education-info div {
+    height: 100%;
+    display: grid;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 5vh;
+}
+
+.education-info img {
+    margin-top: -8vh;
+    width: 15vh; 
+    filter: invert(73%) sepia(71%) saturate(1833%) hue-rotate(169deg) brightness(108%) contrast(117%);
+    transform: scaleY(-1) rotate(90deg);
+}
+
+.education-icon {
+    display: grid;
+    align-items: end;
+}
+
+.education-icon img {
+    width: 30vh;
+}
+

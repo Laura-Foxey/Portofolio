@@ -1,0 +1,38 @@
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 70vh;
+    height: 90%;
+    padding: 1vh;
+    margin-left: -1vh;
+}
+
+.about-image{
+    padding-top: 5vh;
+    padding-left: 20vh;
+}
+
+
+.about-image img {
+    width: 50vh;
+}
+.about-text-underline {
+    margin-top: -6vh;
+    font-size: 1.5vh;
+}
+
+.quote {
+    font-family: 'Ms Madi';
+    font-size: 3vh;
+}
+
+h3 {
+    font-size: 7vh;
+}
+
+h4 {
+    font-size: 2.5vh;
+}

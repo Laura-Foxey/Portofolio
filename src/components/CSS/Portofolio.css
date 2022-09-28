@@ -1,0 +1,38 @@
+.portofolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.slider-box {
+    position: relative;
+    height: 100%;
+}
+
+.slider {
+    margin-top: 10vh;
+    display: block;
+    position: relative;
+}
+
+.slider-overlay {
+    backdrop-filter: blur(5px);
+    margin-top: 10vh;
+    position: absolute;
+    top: 0;
+    width: 407px;
+    height: 229px;
+    padding: 3vh;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.slider-overlay:hover {
+    opacity: 1;
+}
