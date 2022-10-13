@@ -23,7 +23,7 @@
     padding: var(--ruler);
     background-color: var(--light-blue-color);
     margin-right: 8px;
-    box-shadow:  inset 2px 2px 5px var(--color-shadow), inset -5px -5px 10px var(--color-white);
+    box-shadow:  inset 2px 2px 1px var(--color-shadow), inset 5px 7px 1px var(--color-white);
     width: 50vh;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
