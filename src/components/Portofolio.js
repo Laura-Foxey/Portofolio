@@ -27,34 +27,8 @@ function Portofolio({direction}) {
         animate={{x: 0, opacity: 1}}
         >
             <div className='slider-box'>
-                <div className='slider'>
-                    <SimpleImageSlider className='slider'
-                        width={407}
-                        height={229}
-                        images={tarotimages}
-                        autoPlay={true}
-                        autoPlayDelay={4}
-                    />
-                </div>
-                <div className='slider-overlay'>
-                    <a href='https://github.com/Laura-Foxey/tarotReader' target="_blank" rel='noreferrer'> Tarot Reader </a>
-                    <h5>Webapp built in the style of a game to simulate having your tarot cards read.</h5>
-                </div>
-            </div>
-            <div className='slider-box'>
-                <div className='slider'>
-                    <SimpleImageSlider
-                        width={407}
-                        height={229}
-                        images={twerpimages}
-                        autoPlay={true}
-                        autoPlayDelay={4.2}
-                    />
-                </div>
-                <div className='slider-overlay'>
-                    <a href='https://github.com/LucasCNordstrom/Loop5FinalProject' target="_blank" rel='noreferrer'> Twerp </a>
-                    <h5>This webapp helps keep track of your perishables and their expiration countdown.</h5>
-                </div>
+                <section> a</section>
+                <section> b</section>
             </div>
         </motion.div>
     );

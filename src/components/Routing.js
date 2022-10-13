@@ -6,7 +6,8 @@ import arrow from '../images/arrow.png';
 import leftarrow from '../images/leftarrow.png';
 import './CSS/Routing.css';
 import { motion } from "framer-motion";
-import { BrowserRouter as Route, Routes, useLocation, useNavigate} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import { useState} from 'react';
 
 
