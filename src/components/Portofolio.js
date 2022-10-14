@@ -50,6 +50,7 @@ const spring = {
         
 function Portofolio({direction}) {
     const [array, setArray] = useState([Twerp, Tarot, Ghostbuster]);
+    const [count, setCount] = useState(0);
     const tarotimages = [
         {url: tarot1},
         {url: tarot2},
@@ -96,10 +97,13 @@ function Portofolio({direction}) {
     //     return () => clearInterval(intervalID);
     // }, [array]);
 
+
     useEffect(() => {
-        
-        setTimeout(() => setArray(cshift(array)), 3000);
-      }, [array]);
+        let replacement = cshift(array);
+        setTimeout(() =>  setArray(replacement), 3000);
+      }, []);
+
+      console.log(array);
 
     return (
         <>

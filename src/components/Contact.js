@@ -40,8 +40,8 @@ function Contact({direction}) {
                 </label>
 
                 <label>
-                <select name="Subject" required={true}>
-                    <option disabled selected value> -- select an option -- </option>
+                <select name="Subject" required={true} defaultValue={'DEFAULT'}>
+                    <option disabled value="DEFAULT"> -- select an option -- </option>
                     <option value="Technical">Website issues or Suggestions</option>
                     <option value="Job">Job offers</option>
                     <option value="Suggestions">Promotions</option>

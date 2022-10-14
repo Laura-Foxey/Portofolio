@@ -23,7 +23,7 @@ function About({direction}) {
                     <br />I dream to be part of an amazing team that will help me unleash my full potential so I can become
                     a confident developer, and in return contribute with my newfound knowledge.
                     <br />
-                    <NavLink exact to='/contact' style={{color: '#ff34b3'}}>Show me where I belong.</NavLink>
+                    <NavLink to='/contact' style={{color: '#ff34b3'}}>Show me where I belong.</NavLink>
                 </h4>
                 <h5 className="quote"> 
                     “Learn not as if you were reaching your goal, but as though you were scared of missing it.” 
