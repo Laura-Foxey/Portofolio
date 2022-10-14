@@ -18,7 +18,7 @@ const Twerp =
             <h3>Twerp</h3>
             <h5>Final group project for Salt's curriculum</h5>
             <h5>Webapp for storing and tracking perishables's expiration date.</h5>
-            <img src={twerp1} alt="twerp-prntscreen" width={250}/>
+            <img src={twerp1} alt="twerp-prntscreen"/>
         </motion.div>
     </a>]
 
@@ -28,7 +28,7 @@ const Tarot =
             <h3>Tarot Reader</h3>
             <h5>Hackday project built in 24h</h5>
             <h5>Webapp in the style of a game to simulate having your cards read.</h5>
-            <img src={tarot1} alt="twerp-prntscreen" width={250}/>
+            <img src={tarot1} alt="twerp-prntscreen"/>
         </motion.div>
     </a>]
 
@@ -38,7 +38,7 @@ const Ghostbuster =
                 <h3>Ghost Buster</h3>
                 <h5>Windows Forms game in C#</h5>
                 <h5>Shoot ghosts with this simple game and try not to die!</h5>
-                <img src={ghostbuster1} alt="twerp-prntscreen" width={250}/>
+                <img src={ghostbuster1} alt="twerp-prntscreen"/>
             </motion.div>
         </a>]
         
@@ -68,42 +68,35 @@ function Portofolio({direction}) {
     const cshift = (arr) => 
     {
         let temp;
+        let newArr = [];
         if (arr.length > 2)
         {   
             temp = arr[0];
             for (let i = 1; i < arr.length; i++)
             {
-                arr[i - 1] = arr[i];
+                newArr[i - 1] = arr[i];
             }
-            arr[arr.length - 1] = temp;
+            newArr[arr.length - 1] = temp;
         }
-        return arr;;
+        return newArr;
     }
-
-    //   useEffect(() => {
-    //     const interval = setInterval(() => {
-    //        array = shift(array);
-    //     }, 1000);
-      
-    //     return () => clearInterval(interval);
-    //   }, []);
-
 
     // useEffect(() => {
     //     const intervalID = setInterval(() =>  {
-    //         setArray(shift(array));
-    //     }, 1000);
+    //         setArray(shuffle(array));
+    //     }, 2000);
     
     //     return () => clearInterval(intervalID);
     // }, [array]);
 
 
     useEffect(() => {
+        const intervalID = setInterval(() =>  {
         let replacement = cshift(array);
-        setTimeout(() =>  setArray(replacement), 3000);
-      }, []);
+        setArray(replacement)}, 3500);
 
-      console.log(array);
+        return () => clearInterval(intervalID);
+      }, [array]);
 
     return (
         <>

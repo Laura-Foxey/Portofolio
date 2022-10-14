@@ -8,7 +8,8 @@ import './CSS/Routing.css';
 import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
 import {useLocation, useNavigate} from "react-router-dom";
-import { useState} from 'react';
+import { useEffect, useState, useCallback} from 'react';
+
 
 
 function Routing() {
@@ -16,7 +17,9 @@ function Routing() {
     const location = useLocation();
     const [direction, setDirection] = useState(0);
 
-    const rightArrow = () => {
+
+
+    const rightArrow = useCallback(() => {
         switch(location.pathname) {
             case '/':
                 setDirection(1)
@@ -37,9 +40,9 @@ function Routing() {
             default:
                 break;
         }
-    }
+    }, [location.pathname, navigate])
 
-    const leftArrow = () => {
+    const leftArrow = useCallback(() => {
         switch(location.pathname) {
             case '/':
                 setDirection(0)
@@ -60,27 +63,31 @@ function Routing() {
             default:
                 break;
         }
-    }
+    }, [location.pathname, navigate])
 
-    var scrollableElement = document.body; //document.getElementById('scrollableElement');
+    useEffect(() => {
+        var scrollableElement = document.body; //document.getElementById('scrollableElement');
 
-    scrollableElement.addEventListener('wheel', checkScrollDirection);
+        scrollableElement.addEventListener('wheel', checkScrollDirection);
+
+        function checkScrollDirection(event) {
+            if (checkScrollDirectionIsUp(event)) {
+            leftArrow();
+            } else {
+            rightArrow();
+            }
+        }
+
+        function checkScrollDirectionIsUp(event) {
+            if (event.wheelDelta) {
+            return event.wheelDelta > 0;
+            }
+            return event.deltaY < 0;
+        }
+
+    }, [leftArrow, rightArrow]);
+
     
-    function checkScrollDirection(event) {
-      if (checkScrollDirectionIsUp(event)) {
-        leftArrow();
-      } else {
-        rightArrow();
-      }
-    }
-    
-    function checkScrollDirectionIsUp(event) {
-      if (event.wheelDelta) {
-        return event.wheelDelta > 0;
-      }
-      return event.deltaY < 0;
-    }
-
     return (
         <>
             <div className='arrow' > 
