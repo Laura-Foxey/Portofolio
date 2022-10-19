@@ -44,6 +44,7 @@ h4 {
         flex-direction: column;
         justify-content: space-evenly;
         width: 100%;
+        padding-top: 15vh;
     }
 
     .about-image{

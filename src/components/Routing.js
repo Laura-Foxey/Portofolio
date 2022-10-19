@@ -17,8 +17,6 @@ function Routing() {
     const location = useLocation();
     const [direction, setDirection] = useState(0);
 
-
-
     const rightArrow = useCallback(() => {
         switch(location.pathname) {
             case '/':

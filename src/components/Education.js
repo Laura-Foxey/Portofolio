@@ -55,7 +55,8 @@ function Education({direction}) {
 
     const eduInfo3 = 
     <div>
-        <h3>Salt Sthlm (2022-present)</h3>
+        <h3 className='remove-border-bottom'>Salt Sthlm</h3>
+        <h3>(2022-present)</h3>
         <h4>All good knowledge needs a solid foundation, and Salt helped me build mine through three months of intensive coding. </h4>
         <h4>New skills & level ups: C#, HTML, CSS, Javascript, VSC. </h4>
     </div>
@@ -76,6 +77,11 @@ function Education({direction}) {
                 <Doughnut id="chart" data={data} ref={chartRef} onClick={e => onClick(e)} width={400} padding={10}/>
                 <p>Total: {310 + 420 + salt} days</p>
             </div>
+            <ul className='mobile-education-info'>
+                <li>{eduInfo1} </li>
+                <li>{eduInfo2}</li>
+                <li>{eduInfo3}</li>
+            </ul>
             <div className="education-info">
                 {eduInfo === 0 && eduInfo0}
                 {eduInfo === 1 && eduInfo1}

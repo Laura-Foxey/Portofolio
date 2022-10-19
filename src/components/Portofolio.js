@@ -13,34 +13,40 @@ import { motion} from "framer-motion"
 import { useEffect, useMemo, useRef, useState} from 'react';
 
 const Twerp =
-    [1, <a href='https://github.com/LucasCNordstrom/Loop5FinalProject' target="_blank" rel='noreferrer'>
-        <motion.div className='project-card' whileHover={{ scale: 1.1 }}>
-            <h3>Twerp</h3>
-            <h5>Final group project for Salt's curriculum</h5>
-            <h5>Webapp for storing and tracking perishables's expiration date.</h5>
-            <img src={twerp1} alt="twerp-prntscreen"/>
-        </motion.div>
-    </a>]
+    [1, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>
+            <a href='https://github.com/LucasCNordstrom/Loop5FinalProject' target="_blank" rel='noreferrer'>
+                <section className='project-card-flex'>
+                    <h3 className='project-card-title'>Twerp</h3>
+                    <h5>Final group project for Salt's curriculum</h5>
+                    <h5>Webapp for storing and tracking perishables's expiration date.</h5>
+                    <img src={twerp1} alt="twerp-prntscreen"/>
+                </section>
+            </a>
+        </motion.section>]
 
 const Tarot =
-    [2, <a href='https://github.com/Laura-Foxey/tarotReader' target="_blank" rel='noreferrer'>
-        <motion.div className='project-card' whileHover={{ scale: 1.1 }}>
-            <h3>Tarot Reader</h3>
-            <h5>Hackday project built in 24h</h5>
-            <h5>Webapp in the style of a game to simulate having your cards read.</h5>
-            <img src={tarot1} alt="twerp-prntscreen"/>
-        </motion.div>
-    </a>]
+    [2, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>
+            <a href='https://github.com/Laura-Foxey/tarotReader' target="_blank" rel='noreferrer'>
+                <section className='project-card-flex'>
+                    <h3 className='project-card-title'>Tarot Reader</h3>
+                    <h5>Hackday project built in 24h</h5>
+                    <h5>Webapp in the style of a game to simulate having your cards read.</h5>
+                    <img src={tarot1} alt="twerp-prntscreen"/>
+                </section>
+            </a>
+        </motion.section>]
 
 const Ghostbuster =
-        [3, <a href='https://github.com/Laura-Foxey/Ghost-Buster' target="_blank" rel='noreferrer'>
-            <motion.div className='project-card' whileHover={{ scale: 1.1 }}>
-                <h3>Ghost Buster</h3>
-                <h5>Windows Forms game in C#</h5>
-                <h5>Shoot ghosts with this simple game and try not to die!</h5>
-                <img src={ghostbuster1} alt="twerp-prntscreen"/>
-            </motion.div>
-        </a>]
+        [3, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>    
+                <a href='https://github.com/Laura-Foxey/Ghost-Buster' target="_blank" rel='noreferrer'>
+                    <section className='project-card-flex'>
+                        <h3 className='project-card-title'>Ghost Buster</h3>
+                        <h5>Windows Forms game in C#</h5>
+                        <h5>Shoot ghosts with this simple game and try not to die!</h5>
+                        <img src={ghostbuster1} alt="twerp-prntscreen"/>
+                    </section>
+                </a>
+        </motion.section>]
         
 const spring = {
     type: "spring",
@@ -50,20 +56,7 @@ const spring = {
         
 function Portofolio({direction}) {
     const [array, setArray] = useState([Twerp, Tarot, Ghostbuster]);
-    const [count, setCount] = useState(0);
-    const tarotimages = [
-        {url: tarot1},
-        {url: tarot2},
-        {url: tarot3},
-    ];
-
-    const twerpimages = [
-        {url: twerp1},
-        {url: twerp2},
-        {url: twerp3},
-    ];
-
-    //let projectList = [Twerp, Tarot, Ghostbuster];
+    const isMobile = window.innerWidth < 700;
 
     const cshift = (arr) => 
     {
@@ -81,22 +74,15 @@ function Portofolio({direction}) {
         return newArr;
     }
 
+    // //only work while it is not mobile
     // useEffect(() => {
+    //     if (isMobile === false) {
     //     const intervalID = setInterval(() =>  {
-    //         setArray(shuffle(array));
-    //     }, 2000);
-    
-    //     return () => clearInterval(intervalID);
-    // }, [array]);
+    //     let replacement = cshift(array);
+    //     setArray(replacement)}, 3500);
 
-
-    useEffect(() => {
-        const intervalID = setInterval(() =>  {
-        let replacement = cshift(array);
-        setArray(replacement)}, 3500);
-
-        return () => clearInterval(intervalID);
-      }, [array]);
+    //     return () => clearInterval(intervalID);}
+    //   }, [array]);
 
     return (
         <>

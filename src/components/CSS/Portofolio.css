@@ -1,9 +1,3 @@
-.portofolio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-}
-
 .slider-box {
     width: inherit;
     height: inherit;
@@ -15,10 +9,6 @@
 .project-card {
     color: var(--background-color);
     background-color: var(--light-blue-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     width: 45vh;
     height: 50vh;
     padding: 0 2vh;
@@ -26,7 +16,15 @@
     box-shadow: rgb(56 198 255 / 81%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
 }
 
-.project-card h3 {
+.project-card-flex {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.project-card-title {
     white-space: nowrap;
     overflow: hidden;
 }
@@ -36,20 +34,28 @@
 }
 
 @media only screen and (max-width: 700px) {
-    .portofolio {
-        width: 100%;
+    .slider-box {
+        width: fit-content;
         display: flex;
         flex-direction: column;
-    }
-
-    .slider-box {
-        width: 100%;
+        justify-content: flex-start;
     }
 
     .project-card {
-        width: 50%;
-        height: 30vh;
-        padding: 0 2vh;
+        width: 38vh;
+        height: 35vh;
+        padding: 2vh;
+        margin: 2vh 0vh;
+        font-size: large;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around
+    }
+
+    
+    .project-card-title {
+        font-size: xx-large;
     }
 
     .slider-box img {
