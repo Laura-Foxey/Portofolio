@@ -14,37 +14,31 @@ import { useEffect, useMemo, useRef, useState} from 'react';
 
 const Twerp =
     [1, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>
-            <a href='https://github.com/LucasCNordstrom/Loop5FinalProject' target="_blank" rel='noreferrer'>
-                <section className='project-card-flex'>
-                    <h3 className='project-card-title'>Twerp</h3>
-                    <h5>Final group project for Salt's curriculum</h5>
-                    <h5>Webapp for storing and tracking perishables's expiration date.</h5>
-                    <img src={twerp1} alt="twerp-prntscreen"/>
-                </section>
+            <a href='https://github.com/LucasCNordstrom/Loop5FinalProject' target="_blank" rel='noreferrer' className='project-card-flex'>
+                <h3 className='project-card-title'>Twerp</h3>
+                <h5>Final group project for Salt's curriculum</h5>
+                <h5>Webapp for storing and tracking perishables's expiration date.</h5>
+                <img src={twerp1} alt="twerp-prntscreen"/>
             </a>
         </motion.section>]
 
 const Tarot =
     [2, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>
-            <a href='https://github.com/Laura-Foxey/tarotReader' target="_blank" rel='noreferrer'>
-                <section className='project-card-flex'>
-                    <h3 className='project-card-title'>Tarot Reader</h3>
-                    <h5>Hackday project built in 24h</h5>
-                    <h5>Webapp in the style of a game to simulate having your cards read.</h5>
-                    <img src={tarot1} alt="twerp-prntscreen"/>
-                </section>
+            <a href='https://github.com/Laura-Foxey/tarotReader' target="_blank" rel='noreferrer' className='project-card-flex'>
+                <h3 className='project-card-title'>Tarot Reader</h3>
+                <h5>Hackday project built in 24h</h5>
+                <h5>Webapp in the style of a game to simulate having your cards read.</h5>
+                <img src={tarot1} alt="twerp-prntscreen"/>
             </a>
         </motion.section>]
 
 const Ghostbuster =
         [3, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>    
-                <a href='https://github.com/Laura-Foxey/Ghost-Buster' target="_blank" rel='noreferrer'>
-                    <section className='project-card-flex'>
-                        <h3 className='project-card-title'>Ghost Buster</h3>
-                        <h5>Windows Forms game in C#</h5>
-                        <h5>Shoot ghosts with this simple game and try not to die!</h5>
-                        <img src={ghostbuster1} alt="twerp-prntscreen"/>
-                    </section>
+                <a href='https://github.com/Laura-Foxey/Ghost-Buster' target="_blank" rel='noreferrer' className='project-card-flex'>
+                    <h3 className='project-card-title'>Ghost Buster</h3>
+                    <h5>Windows Forms game in C#</h5>
+                    <h5>Shoot ghosts with this simple game and try not to die!</h5>
+                    <img src={ghostbuster1} alt="twerp-prntscreen"/>
                 </a>
         </motion.section>]
         
