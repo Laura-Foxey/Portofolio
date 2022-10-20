@@ -85,3 +85,31 @@ textarea::-moz-placeholder {
     width: 8vh;
     filter: invert(73%) sepia(71%) saturate(1833%) hue-rotate(169deg) brightness(108%) contrast(117%);
 }
+
+ @media only screen and (max-width: 700px) {
+    .contact {
+        width: 100%;
+        height: 100%;
+        margin-top: 5vh;
+    }
+
+    #contact-form {
+        margin: 2vh auto;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .contact input, textarea, select {
+        width: 35vh;
+    }
+
+    #submit-btn {
+        box-shadow: -5px -5px 3px var(--color-white),  5px 5px 20px var(--color-shadow);
+        width: 90%;
+    }
+
+    .contact-links{
+        flex-direction: row;
+        margin-top: 8vh;
+    }
+} 

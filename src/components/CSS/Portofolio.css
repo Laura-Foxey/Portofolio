@@ -53,9 +53,9 @@
     }
 
     .project-card {
-        width: 38vh;
+        width: 35vh;
         height: 35vh;
-        padding: 2vh;
+        padding: 2vh 0vh;
         margin-bottom: 4vh;
         font-size: large;
         overflow: hidden;
