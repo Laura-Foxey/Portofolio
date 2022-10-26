@@ -1,16 +1,10 @@
 import './CSS/Portofolio.css'
 import tarot1 from '../images/tarot-reader-scrn1.png';
-import tarot2 from '../images/tarot-reader-scrn2.png';
-import tarot3 from '../images/tarot-reader-scrn3.png';
 import twerp1 from '../images/twerp-scrn1.png';
-import twerp2 from '../images/twerp-scrn2.png';
-import twerp3 from '../images/twerp-scrn3.png';
 import ghostbuster1 from  '../images/ghost-buster-scrn1.png';
-import SimpleImageSlider from "react-simple-image-slider";
-import { shuffle } from "lodash";
 
 import { motion} from "framer-motion"
-import { useEffect, useMemo, useRef, useState} from 'react';
+import { useEffect, useState} from 'react';
 
 const Twerp =
     [1, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>
@@ -68,15 +62,15 @@ function Portofolio({direction}) {
         return newArr;
     }
 
-    // //only work while it is not mobile
-    // useEffect(() => {
-    //     if (isMobile === false) {
-    //     const intervalID = setInterval(() =>  {
-    //     let replacement = cshift(array);
-    //     setArray(replacement)}, 3500);
+    //only work while it is not mobile
+    useEffect(() => {
+        if (isMobile === false) {
+        const intervalID = setInterval(() =>  {
+        let replacement = cshift(array);
+        setArray(replacement)}, 3500);
 
-    //     return () => clearInterval(intervalID);}
-    //   }, [array]);
+        return () => clearInterval(intervalID);}
+      }, [array, isMobile]);
 
     return (
         <>
