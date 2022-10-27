@@ -45,6 +45,7 @@ h4 {
         justify-content: space-evenly;
         width: 100%;
         padding-top: 15vh;
+        padding-bottom: 115vh;
     }
 
     .about-image{
@@ -62,5 +63,9 @@ h4 {
 
     .about-text-underline {
         margin-top: 1vh;
+    }
+
+    .quote {
+        padding-top: 5vh;
     }
 }

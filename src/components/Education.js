@@ -11,6 +11,8 @@ ChartJs.register(
 
 function Education({direction}) {
     const [eduInfo, setEduInfo] = useState(0);
+    const isMobile = window.innerWidth < 700;
+
     const today = Date.parse(new Date());
     const salt = Math.ceil((Date.parse('02 May 2022 00:00:00 GMT') - today) / (1000 * 60 * 60 * 24) * -1)
     const data = {
@@ -67,28 +69,30 @@ function Education({direction}) {
         <h4>Click a doghnut section to learn more! </h4>
         <img src={pointer} alt="pointer-arrow"/>
     </div>
-    
+
     return (
-        <motion.div className="education template"
-        initial= {{x: direction > 0 ? -100: 100}}
-        animate={{x: 0, opacity: 1}}
-        >
-            <div className="donut">
-                <Doughnut id="chart" data={data} ref={chartRef} onClick={e => onClick(e)} width={400} padding={10}/>
-                <p>Total: {310 + 420 + salt} days</p>
-            </div>
-            <ul className='mobile-education-info'>
-                <li>{eduInfo1} </li>
-                <li>{eduInfo2}</li>
-                <li>{eduInfo3}</li>
-            </ul>
-            <div className="education-info">
-                {eduInfo === 0 && eduInfo0}
-                {eduInfo === 1 && eduInfo1}
-                {eduInfo === 2 && eduInfo2}
-                {eduInfo === 3 && eduInfo3}
-            </div>
-        </motion.div>
+        <>
+            <motion.div className="education template"
+            initial= {{x: direction > 0 ? -100: 100}}
+            animate={{x: 0, opacity: 1}}
+            >
+                <div className="donut">
+                    <Doughnut id="chart" data={data} ref={chartRef} onClick={e => onClick(e)} width={400} padding={10}/>
+                    <p>Total: {310 + 420 + salt} days</p>
+                </div>
+                { isMobile && <ul className='mobile-education-info'>
+                    <li>{eduInfo1} </li>
+                    <li>{eduInfo2}</li>
+                    <li>{eduInfo3}</li>
+                </ul>}
+                { !isMobile && <div className="education-info">
+                    {eduInfo === 0 && eduInfo0}
+                    {eduInfo === 1 && eduInfo1}
+                    {eduInfo === 2 && eduInfo2}
+                    {eduInfo === 3 && eduInfo3}
+                </div>}
+            </motion.div>
+        </>
     );
   }
   

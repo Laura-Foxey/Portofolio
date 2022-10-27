@@ -13,7 +13,7 @@ function Contact({direction}) {
     
         emailjs.sendForm('service_9g6qvnf', 'template_g0bmjsn', e.target, 'AIxBFltfpVyq0iPIV')
           .then((result) => {
-            toast.success('Succes! Thanks for your message.', {
+            toast.success('Succes! Thanks for your message.♥', {
                 position: "bottom-center",
                 autoClose: 3000,
                 hideProgressBar: false,

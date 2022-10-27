@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
 import {useLocation, useNavigate} from "react-router-dom";
 import { useEffect, useState, useCallback} from 'react';
+import Mood from './Mood';
 
 
 
@@ -97,6 +98,7 @@ function Routing() {
                         <Route path="/education" element={<Education direction={direction}/>} />
                         <Route path="/portofolio" element={<Portofolio direction={direction}/>} />
                         <Route path="/contact" element={<Contact direction={direction}/>} />
+                        <Route path="/mood" element={<Mood />} />
                     </Routes>
             </div>
             <div className='arrow' >
