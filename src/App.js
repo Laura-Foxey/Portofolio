@@ -8,9 +8,8 @@ import Mood from './components/Mood';
 function App() {
 	const [mood, setMood] = useState();
 
-  useEffect(() => {
-    const headTag = document.getElementsByTagName('head')[0];
-    const styleTag = document.createElement("style");
+	const headTag = document.getElementsByTagName('head')[0];
+  const styleTag = document.createElement("style");
 
   const selectMood = () => {
     if ( mood === 'focused') {
@@ -69,8 +68,10 @@ function App() {
     }
     headTag.appendChild(styleTag);
   }
+
+  useEffect(() => {
     selectMood();
-  }, [mood])
+  }, [mood, ])
 
 	console.log(mood);
 
