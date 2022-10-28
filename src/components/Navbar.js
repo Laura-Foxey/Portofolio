@@ -12,25 +12,25 @@ function Navbar() {
         <ul className="navbar-list">
             <motion.li whileHover={{ scale: 1.2 }} className="navbar-list_border">
                 <NavLink className={({ isActive }) => 
-                      (isActive ? "pink-recolor" : "blue-recolor")} to="/">
-                        <img src={profileNav} alt="profile-navigation"/>
+                      (isActive ? "contrast-recolor" : "color-recolor")} to="/">
+                        <img src={profileNav} alt="profile-navigation" />
                 </NavLink>
             </motion.li>
             <motion.li whileHover={{ scale: 1.2 }} className="navbar-list_border">
                 <NavLink className={({ isActive }) => 
-                      (isActive ? "pink-recolor" : "blue-recolor")} to="/education" >
+                      (isActive ? "contrast-recolor" : "color-recolor")} to="/education" >
                         <img src={educationNav} alt="education-navigation"/>
                 </NavLink>
             </motion.li>
             <motion.li whileHover={{ scale: 1.2 }} className="navbar-list_border">
                 <NavLink className={({ isActive }) => 
-                      (isActive ? "pink-recolor" : "blue-recolor")} to="/portofolio">
+                      (isActive ? "contrast-recolor" : "color-recolor")} to="/portofolio">
                         <img src={portofolioNav} alt="portofolio-navigation"/>
                 </NavLink>
             </motion.li>
             <motion.li whileHover={{ scale: 1.2 }} className="navbar-list_border">
                 <NavLink className={({ isActive }) => 
-                      (isActive ? "pink-recolor" : "blue-recolor")} to="/contact">
+                      (isActive ? "contrast-recolor" : "color-recolor")} to="/contact">
                         <img src={contactNav} alt="contact-navigation"/>
                 </NavLink>
             </motion.li>

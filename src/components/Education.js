@@ -13,6 +13,18 @@ function Education({direction}) {
     const [eduInfo, setEduInfo] = useState(0);
     const isMobile = window.innerWidth < 700;
 
+    const moodColor = (mood) => {
+        if (mood === 'focused') {
+            return ['#96ceff', '#2011a2', '#ff34b3', '#f7a35b', '#8286e9'];
+        }
+        if (mood === 'relaxed') {
+            return ['#96ceff', '#2011a2', '#ff34b3', '#f7a35b', '#8286e9'];
+        }
+        if (mood === 'sleepy') {
+            return ['#96ceff', '#2011a2', '#ff34b3', '#f7a35b', '#8286e9'];
+        }
+    }
+
     const today = Date.parse(new Date());
     const salt = Math.ceil((Date.parse('02 May 2022 00:00:00 GMT') - today) / (1000 * 60 * 60 * 24) * -1)
     const data = {
@@ -67,7 +79,7 @@ function Education({direction}) {
     <div>
         <br/>
         <h4>Click a doghnut section to learn more! </h4>
-        <img src={pointer} alt="pointer-arrow"/>
+        <img src={pointer} alt="pointer-arrow" className='color-recolor'/>
     </div>
 
     return (

@@ -20,10 +20,3 @@
     height: auto;
 }
 
-.blue-recolor {
-    filter: invert(73%) sepia(71%) saturate(1833%) hue-rotate(169deg) brightness(108%) contrast(117%);
-}
-
-.pink-recolor {
-    filter: invert(34%) sepia(38%) saturate(4081%) hue-rotate(301deg) brightness(101%) contrast(101%);
-}

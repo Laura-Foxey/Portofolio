@@ -1,10 +1,24 @@
-* {
+:root {
   --background-color: #201148;
-  --blue-color: #00ccfd;
-  --dark-blue-color: #2011a2;
-  --light-blue-color: #55e7ff;
-  --pink-color: #ff34b3;
+  --common-color: #00ccfd;
+  --dark-color: #2011a2;
+  --light-color: #55e7ff;
+  --contrast-color: #ff34b3;
 }
+
+.color-recolor {
+  filter: invert(73%) sepia(71%) saturate(1833%) hue-rotate(169deg) brightness(108%) contrast(117%); 
+}
+
+.contrast-recolor {
+  filter: invert(34%) sepia(38%) saturate(4081%) hue-rotate(301deg) brightness(101%) contrast(101%);
+}
+
+.arrow img {
+  width: 8vh;
+  cursor: pointer;
+}
+
 
 body {
   margin: 0;
@@ -14,7 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
-  color: var(--blue-color);
+  color: var(--light-color);
 }
 
 code {
@@ -24,7 +38,6 @@ code {
 }
 
 a, a:visited, a:hover, a:active, a:link {
-  color: inherit;
   text-decoration: none;
 }
 

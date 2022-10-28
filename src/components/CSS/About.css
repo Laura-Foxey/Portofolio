@@ -15,13 +15,30 @@
     padding-left: 20vh;
 }
 
+.profile-circle {
+    margin-top: 7vh;
+    margin-left: 2.7vh;
+    padding-left: 20vh;
+    position: absolute;
+    width: 45vh;
+    height: 45vh;
+    border-radius: 50%;
+    background-color: var(--light-color);
+}
+
 .about-image img {
+    position: relative;
     width: 50vh;
+    left: 0vh;
 }
 
 .about-text-underline {
     margin-top: -6vh;
     font-size: 1.5vh;
+}
+
+.complementary-color {
+    color: var(--contrast-color);
 }
 
 .quote {

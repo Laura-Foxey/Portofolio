@@ -61,13 +61,13 @@ function Contact({direction}) {
             </form>
             <section className='contact-links'>
                 <a href="https://www.linkedin.com/in/laura-gheorghe-107047244/" target="_blank" rel='noreferrer'>
-                    <motion.img src="https://cdn-icons-png.flaticon.com/512/3536/3536569.png" whileHover={{ scale: 1.2 }}/>
+                    <motion.img className="color-recolor" src="https://cdn-icons-png.flaticon.com/512/3536/3536569.png" whileHover={{ scale: 1.2 }}/>
                 </a>
                 <a href="https://github.com/Laura-Foxey" target="_blank" rel='noreferrer'>
-                    <motion.img src='https://cdn-icons-png.flaticon.com/512/25/25231.png' whileHover={{ scale: 1.2 }}/>
+                    <motion.img className="color-recolor" src='https://cdn-icons-png.flaticon.com/512/25/25231.png' whileHover={{ scale: 1.2 }}/>
                 </a>
                 <a href="mailto:laura.gheorghe@appliedtechnology.se" target="_blank" rel='noreferrer'>
-                    <motion.img src='https://cdn-icons-png.flaticon.com/512/2669/2669570.png' whileHover={{ scale: 1.2 }}/>
+                    <motion.img className="color-recolor" src='https://cdn-icons-png.flaticon.com/512/2669/2669570.png' whileHover={{ scale: 1.2 }}/>
                 </a>
             </section>
             <ToastContainer/>

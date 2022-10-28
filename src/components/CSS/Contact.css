@@ -1,18 +1,13 @@
-* {
-    --ruler: 16px;
-    --color-shadow: #3100c2;;
-    --color-white: #382d977a;
-}
 
 .contact form{
     margin: 5vh auto;
     width: 70vh;
     padding: 16px;
-    color:#314eb7;
+    color: var(--background-color);
 }
 
 .contact input, textarea, select {
-    color:#314eb7;
+    color: var(--background-color);
     opacity: 1;
     font-family: 'Montserrat', sans-serif;
     margin: 1vh;
@@ -21,9 +16,9 @@
     outline: 0;
     border-radius: 30px;
     padding: var(--ruler);
-    background-color: var(--light-blue-color);
+    background-color: var(--light-color);
     margin-right: 8px;
-    box-shadow:  inset 2px 2px 1px var(--color-shadow), inset 5px 7px 1px var(--color-white);
+    box-shadow:  inset 2px 2px 1px var(--light-color), inset 5px 7px 1px var(--background-color);
     width: 50vh;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
@@ -32,22 +27,22 @@
 }
 
 input::-webkit-input-placeholder{
-    color:#314eb7;
+    color:var(--background-color);
 }
 input:-moz-placeholder {
-    color:#314eb7;
+    color:var(--background-color);
 }
 
 textarea::-webkit-input-placeholder{
-    color:#314eb7;
+    color:var(--background-color);
 }
 
 textarea::-moz-placeholder {
-    color:#314eb7;
+    color:var(--background-color);
 }
 
 .contact input:focus, select:focus, textarea:focus {
-    box-shadow:  inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+    box-shadow:  inset 1px 1px 2px var(--dark-color), inset -1px -1px 2px var(--background-color);
   }
 
 .input-message {
@@ -55,20 +50,20 @@ textarea::-moz-placeholder {
 }
 
 #submit-btn {
-    color:#314eb7;
+    color:var(--background-color);
     font-weight: bold;
-    box-shadow: -5px -5px 3px var(--color-white),  5px 5px 20px var(--color-shadow);
+    box-shadow: -5px -5px 3px var(--light-color),  5px 5px 20px var(--dark-color);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     font-weight: 600;
 }
 
 #submit-btn:hover {
-    box-shadow: -2px -2px 5px var(--color-white), 2px 2px 5px var(--color-shadow);
+    box-shadow: -2px -2px 5px var(--background-color), 2px 2px 5px var(--dark-color);
 }
 
 #submit-btn:active {
-    box-shadow: inset 1px 1px 2px var(--color-shadow), inset -1px -1px 2px var(--color-white);
+    box-shadow: inset 1px 1px 2px var(--dark-color), inset -1px -1px 2px var(--background-color);
 }
 
 .contact-links{
@@ -83,7 +78,6 @@ textarea::-moz-placeholder {
 
 .contact-links img {
     width: 8vh;
-    filter: invert(73%) sepia(71%) saturate(1833%) hue-rotate(169deg) brightness(108%) contrast(117%);
 }
 
  @media only screen and (max-width: 700px) {
@@ -104,7 +98,7 @@ textarea::-moz-placeholder {
     }
 
     #submit-btn {
-        box-shadow: -5px -5px 3px var(--color-white),  5px 5px 20px var(--color-shadow);
+        box-shadow: -5px -5px 3px var(--background-color),  5px 5px 20px var(--dark-color);
         width: 90%;
     }
 

@@ -4,14 +4,11 @@ import Education from './Education';
 import Portofolio from './Portofolio';
 import arrow from '../images/arrow.png';
 import leftarrow from '../images/leftarrow.png';
-import './CSS/Routing.css';
 import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
 import {useLocation, useNavigate} from "react-router-dom";
 import { useEffect, useState, useCallback} from 'react';
 import Mood from './Mood';
-
-
 
 function Routing() {
     const navigate = useNavigate();
@@ -86,11 +83,10 @@ function Routing() {
 
     }, [leftArrow, rightArrow]);
 
-    
     return (
         <>
-            <div className='arrow' > 
-                <motion.img src={leftarrow} whileHover={{ scale: 1.2 }} onClick={leftArrow}/>
+            <div className='arrow'> 
+                <motion.img className="color-recolor" src={leftarrow} whileHover={{ scale: 1.2 }} onClick={leftArrow}/>
             </div>
             <div className='outline'>
                     <Routes location={location} key={location.pathname}>
@@ -101,8 +97,8 @@ function Routing() {
                         <Route path="/mood" element={<Mood />} />
                     </Routes>
             </div>
-            <div className='arrow' >
-                <motion.img src={arrow} whileHover={{ scale: 1.2 }} onClick={rightArrow}/> 
+            <div className='arrow'>
+                <motion.img className="color-recolor" src={arrow} whileHover={{ scale: 1.2 }} onClick={rightArrow}/> 
             </div>
       </>
     );

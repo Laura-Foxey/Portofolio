@@ -12,6 +12,7 @@ function About({direction}) {
             >
                 {console.log(direction)}
                 <div className="about-image">
+                    <div className='profile-circle' />
                     <img src={profilepic} alt="Profile pic"/>
                 </div>
                 <div className="about-text">
@@ -19,12 +20,12 @@ function About({direction}) {
                     <h5 className='about-text-underline'> It's no coincidence your journey brought you here, and our paths connected.</h5>
                     <h4>
                         <br />
-                        Pleasure to meet you, I'm <b style={{color: '#ff34b3'}}>Laura</b>! A drifter in a wast world of knowledge, seeking to make something my own.
+                        Pleasure to meet you, I'm <b className='complementary-color'>Laura</b>! A drifter in a wast world of knowledge, seeking to make something my own.
                         <br />
                         <br />I dream to be part of an amazing team that will help me unleash my full potential so I can become
                         a confident developer, and in return contribute with my newfound knowledge.
                         <br />
-                        <NavLink to='/contact' style={{color: '#ff34b3'}}>Show me where I belong.</NavLink>
+                        <NavLink to='/contact' className='complementary-color'>Show me where I belong.</NavLink>
                     </h4>
                     <h5 className="quote"> 
                         “Learn not as if you were reaching your goal, but as though you were scared of missing it.” 

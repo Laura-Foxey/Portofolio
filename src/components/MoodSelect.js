@@ -12,26 +12,28 @@ const variants = {
       }
     },
     scalation: {
-      scale: 1.2,
+      scale: 1.1,
       transition: {
         ease: "easeInOut"
       }
     }
   };
 
-function MoodSelect({text, name}) {
+function MoodSelect({text, name, setMood, moodName}) {
     const [hover, setHover] = useState(false);
 
     return (
-        <>
-            <motion.div whileHover={["rotation", "scalation"]} 
+        <li>
+            <motion.div
+                whileHover={["rotation", "scalation"]} 
                 whileTap={{ scale: 0.8 }} variants={variants} 
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
+                onClick={() => setMood(moodName)}
                 className={name}>
             </motion.div>
-            {hover && text}
-        </>
+              {text}
+        </li>
     );
   }
   
