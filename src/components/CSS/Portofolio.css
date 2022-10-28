@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    color: var(--background-color);
 }
 
 .project-card {
@@ -31,10 +32,12 @@
     white-space: nowrap;
     overflow: hidden;
     font-size: 6.5vh;
+    color: var(--background-color);
 }
 
 .project-card h5 {
     font-size: 2vh;
+    color: var(--background-color);
 } 
 
 .project-card img {

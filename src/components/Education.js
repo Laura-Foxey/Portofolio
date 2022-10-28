@@ -9,19 +9,31 @@ ChartJs.register(
 );
 
 
-function Education({direction}) {
+function Education({direction, mood}) {
     const [eduInfo, setEduInfo] = useState(0);
     const isMobile = window.innerWidth < 700;
 
-    const moodColor = (mood) => {
+    const moodColor = () => {
         if (mood === 'focused') {
             return ['#96ceff', '#2011a2', '#ff34b3', '#f7a35b', '#8286e9'];
         }
         if (mood === 'relaxed') {
-            return ['#96ceff', '#2011a2', '#ff34b3', '#f7a35b', '#8286e9'];
+            return ['#ffce5e', '#ff5d0e', '#75ffb2', '#f7a35b', '#8286e9'];
         }
         if (mood === 'sleepy') {
-            return ['#96ceff', '#2011a2', '#ff34b3', '#f7a35b', '#8286e9'];
+            return ['#866faa', '#261144', '#cf6369', '#a997c7', '#a997c7'];
+        }
+    }
+
+    const borderCol = () => {
+        if (mood === 'focused') {
+            return '#55e7ff';
+        }
+        if (mood === 'relaxed') {
+            return '#ffe4a5';
+        }
+        if (mood === 'sleepy') {
+            return '#a997c7';
         }
     }
 
@@ -30,8 +42,8 @@ function Education({direction}) {
     const data = {
         datasets: [{
             data: [310, 420, salt],
-            backgroundColor: ['#96ceff', '#2011a2', '#ff34b3', '#f7a35b', '#8286e9'],
-            borderColor: '#55e7ff',
+            backgroundColor: moodColor(),
+            borderColor: borderCol(),
             hoverOffset: 10,
             },
         ],

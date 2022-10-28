@@ -55,7 +55,7 @@ function App() {
         --background-color: #3c245f;
         --dark-color: #3c245f;
         --light-color: #786498;
-        --contrast-color: #048458;
+        --contrast-color: #b54a4e;
       }
 
       .color-recolor {
@@ -63,7 +63,7 @@ function App() {
       }
 
       .contrast-recolor {
-        filter: invert(35%) sepia(66%) saturate(998%) hue-rotate(121deg) brightness(90%) contrast(97%);
+        filter: invert(29%) sepia(15%) saturate(5730%) hue-rotate(325deg) brightness(102%) contrast(73%);
       }
       `;
     }
@@ -82,7 +82,7 @@ function App() {
 	<BrowserRouter>
 		<Navbar />
 		<div className='grid'>
-			<Routing />
+			<Routing mood={mood}/>
 		</div>
 	</BrowserRouter>
   );

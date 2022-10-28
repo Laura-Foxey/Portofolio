@@ -32,7 +32,15 @@ function MoodSelect({text, name, setMood, moodName}) {
                 onClick={() => setMood(moodName)}
                 className={name}>
             </motion.div>
-              {text}
+              {hover && 
+              <motion.div className="mood-select-text" 
+              layout 
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={3}>
+                {text}
+              </motion.div>}
         </li>
     );
   }

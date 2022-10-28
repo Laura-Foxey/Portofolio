@@ -24,6 +24,7 @@
     height: 45vh;
     border-radius: 50%;
     background-color: var(--light-color);
+    box-shadow: var(--light-color) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
 }
 
 .about-image img {

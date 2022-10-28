@@ -5,15 +5,23 @@
     display: inline-block;
     border-style: solid;
     border-width: 0.5vh;
-    border-color: white;
+    border-color: rgb(255, 255, 255);
     position:relative;
     margin: 5vh;
+  }
+
+  .mood-select {
+    margin-top: 20vh;
   }
 
   .mood-select-list{
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .mood-select-text {
+    font-size: xx-large;
   }
 
   .sleepy {

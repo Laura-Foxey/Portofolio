@@ -1,7 +1,5 @@
 * {
     --ruler: 16px;
-    --color-shadow: #0c0521;;
-    --color-white: #372d97;
 }
 
 .education-info {
@@ -15,6 +13,7 @@
 }
 
 .education-info div {
+    
     height: 100%;
     display: grid;
     flex-direction: column;
