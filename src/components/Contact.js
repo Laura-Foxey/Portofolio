@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './CSS/Contact.css';
 import { motion } from "framer-motion";
+import { SERVICE_CODE, TEMPLATE_CODE, FORM_CODE} from './../../secrets';
 
 function Contact({direction}) {
     const form = useRef();
@@ -11,7 +12,7 @@ function Contact({direction}) {
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm('service_9g6qvnf', 'template_g0bmjsn', e.target, 'AIxBFltfpVyq0iPIV')
+        emailjs.sendForm(SERVICE_CODE, TEMPLATE_CODE, e.target, FORM_CODE)
           .then((result) => {
             toast.success('Succes! Thanks for your message.♥', {
                 position: "bottom-center",
