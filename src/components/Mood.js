@@ -1,6 +1,4 @@
 import "./CSS/Mood.css"
-import { motion} from "framer-motion"
-import { useEffect, useState } from "react";
 import MoodSelect from "./MoodSelect";
 
 

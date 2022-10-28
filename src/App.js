@@ -8,7 +8,8 @@ import Mood from './components/Mood';
 function App() {
 	const [mood, setMood] = useState();
 
-	const headTag = document.getElementsByTagName('head')[0];
+  useEffect(() => {
+    const headTag = document.getElementsByTagName('head')[0];
   const styleTag = document.createElement("style");
 
 
@@ -69,10 +70,8 @@ function App() {
     }
     headTag.appendChild(styleTag);
   }
-
-  useEffect(() => {
     selectMood();
-  }, [mood])
+  }, [mood, ])
 
 	console.log(mood);
 
