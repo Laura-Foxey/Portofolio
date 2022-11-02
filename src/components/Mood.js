@@ -1,5 +1,5 @@
-import "./CSS/Mood.css"
 import MoodSelect from "./MoodSelect";
+import "./CSS/Mood.css"
 
 
 function Mood({setMood}) {

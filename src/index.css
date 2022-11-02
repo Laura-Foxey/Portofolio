@@ -1,3 +1,9 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
 :root {
   --background-color: #e3d7bd;
   --common-color: #00ccfd;
@@ -14,14 +20,11 @@
   filter: invert(34%) sepia(38%) saturate(4081%) hue-rotate(301deg) brightness(101%) contrast(101%);
 }
 
-.arrow img {
-  width: 8vh;
-  cursor: pointer;
+.complementary-color {
+  color: var(--contrast-color);
 }
 
-
 body {
-  margin: 0;
   font-family: 'Montserrat', 'Indie Flower', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -42,5 +45,8 @@ a, a:visited, a:hover, a:active, a:link {
 }
 
 ul {
-  list-style: none
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
 }

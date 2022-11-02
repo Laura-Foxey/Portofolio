@@ -8,11 +8,13 @@ import { motion } from "framer-motion";
 import { Routes, Route } from "react-router-dom";
 import {useLocation, useNavigate} from "react-router-dom";
 import { useEffect, useState, useCallback} from 'react';
+import "./CSS/Routing.css"
 
 function Routing({mood}) {
     const navigate = useNavigate();
     const location = useLocation();
     const [direction, setDirection] = useState(0);
+    const isMobile = window.innerWidth < 700;
 
     const rightArrow = useCallback(() => {
         switch(location.pathname) {
@@ -65,7 +67,7 @@ function Routing({mood}) {
 
         scrollableElement.addEventListener('wheel', checkScrollDirection);
 
-        function checkScrollDirection(event) {
+         function checkScrollDirection(event) {
             if (checkScrollDirectionIsUp(event)) {
             leftArrow();
             } else {
@@ -83,22 +85,22 @@ function Routing({mood}) {
     }, [leftArrow, rightArrow]);
 
     return (
-        <>
-            <div className='arrow'> 
-                <motion.img className="color-recolor" src={leftarrow} whileHover={{ scale: 1.2 }} onClick={leftArrow}/>
+        <div className='grid-display'>
+            {!isMobile && <div className='grid-display__arrow'> 
+                <motion.img className="color-recolor grid-display__arrow_img" src={leftarrow} whileHover={{ scale: 1.2 }} onClick={leftArrow}/>
+            </div>}
+            <div className='grid-display__center'>
+                <Routes location={location} key={location.pathname}>
+                    <Route path="/" element={<About direction={direction}/>} />
+                    <Route path="/education" element={<Education direction={direction} mood={mood}/>} />
+                    <Route path="/portofolio" element={<Portofolio direction={direction}/>} />
+                    <Route path="/contact" element={<Contact direction={direction}/>} />
+                </Routes>
             </div>
-            <div className='outline'>
-                    <Routes location={location} key={location.pathname}>
-                        <Route path="/" element={<About direction={direction}/>} />
-                        <Route path="/education" element={<Education direction={direction} mood={mood}/>} />
-                        <Route path="/portofolio" element={<Portofolio direction={direction}/>} />
-                        <Route path="/contact" element={<Contact direction={direction}/>} />
-                    </Routes>
-            </div>
-            <div className='arrow'>
-                <motion.img className="color-recolor" src={arrow} whileHover={{ scale: 1.2 }} onClick={rightArrow}/> 
-            </div>
-      </>
+            {!isMobile && <div className='grid-display__arrow'>
+                <motion.img className="color-recolor grid-display__arrow_img" src={arrow} whileHover={{ scale: 1.2 }} onClick={rightArrow}/> 
+            </div> }
+      </div>
     );
   }
   

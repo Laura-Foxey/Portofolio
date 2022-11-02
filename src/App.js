@@ -53,7 +53,7 @@ function App() {
       :root {
         --background-color: #3c245f;
         --dark-color: #3c245f;
-        --light-color: #786498;
+        --light-color: #9a82bf;
         --contrast-color: #b54a4e;
       }
 
@@ -71,7 +71,7 @@ function App() {
 
   useEffect(() => {
     selectMood();
-  }, [mood, ])
+  }, [mood ])
 
 	console.log(mood);
 

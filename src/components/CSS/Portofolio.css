@@ -1,79 +1,88 @@
-.slider-box {
-    width: inherit;
-    height: inherit;
-    display: flex;
-    justify-content: space-evenly;
+.portofolio {
+    display: grid;
     align-items: center;
-    color: var(--background-color);
+    justify-items: center;
 }
 
-.project-card {
+.portofolio__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 0 3vw;
+    height: 90%;
+}
+
+.portofolio__list img {
+    width: 80%;
+}
+
+.portofolio__list li {
+    display: flex;
     justify-content: center;
-    color: var(--background-color);
-    background-color: var(--light-color);
-    width: 45vh;
-    height: 50vh;
-    padding: 0 2vh;
-    border-radius: 5%;
-    box-shadow: var(--light-color) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-}
-
-.project-card-flex {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
 }
 
-.project-card-title {
+.portofolio__list__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+    box-shadow: var(--light-color) 0 13px 27px -5px,rgba(0,0,0,.3) 0 8px 16px -8px;
+    height: 80%;
+    width: 80%;
+    border-radius: 15px;
+    padding: 0 5%;
+}
+
+.portofolio__list__card h3{
+    font-size: 2.5vw;
+    margin: 8% 0;
     white-space: nowrap;
-    overflow: hidden;
-    font-size: 6.5vh;
     color: var(--background-color);
 }
 
-.project-card h5 {
-    font-size: 2vh;
+.portofolio__list__card h5{
+    font-size: 1.1vw;
+    margin: 2%;
     color: var(--background-color);
-} 
-
-.project-card img {
-    width: 30vh;
 }
 
 @media only screen and (max-width: 700px) {
     .portofolio {
-        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .slider-box {
+    .portofolio__list {
+        flex-direction: column;
+        height: 95%;
+    }
+
+    .portofolio__list__card {
+        height: 100vw;
+        width: 70vw;
+        padding: 0 5%;
+        margin: 3vh 0;
+    }
+
+    .portofolio__list__card__text {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
-    .project-card {
-        width: 35vh;
-        height: 35vh;
-        padding: 2vh 0vh;
-        margin-bottom: 4vh;
-        font-size: large;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around
+    .portofolio__list__card h3{
+        font-size: 11vw;
+        margin: 8% 0;
+        white-space: nowrap;
+        color: var(--background-color);
     }
-
     
-    .project-card-title {
-        font-size: 5vh;
-        text-decoration: underline;
+    .portofolio__list__card h5{
+        font-size: 5vw;
+        margin: 2%;
+        color: var(--background-color);
     }
 
-    .slider-box img {
-        width: 25vh;
-    }
 }

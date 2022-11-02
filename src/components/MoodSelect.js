@@ -1,4 +1,3 @@
-import "./CSS/Mood.css"
 import { motion} from "framer-motion"
 import { useState } from "react";
 
@@ -19,18 +18,19 @@ const variants = {
     }
   };
 
+
 function MoodSelect({text, name, setMood, moodName}) {
     const [hover, setHover] = useState(false);
 
     return (
         <li>
             <motion.div
-                whileHover={["rotation", "scalation"]} 
-                whileTap={{ scale: 0.8 }} variants={variants} 
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                onClick={() => setMood(moodName)}
-                className={name}>
+              whileHover={["rotation", "scalation"]} 
+              whileTap={{ scale: 0.8 }} variants={variants} 
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              onClick={() => setMood(moodName)}
+              className={name}>
             </motion.div>
               {hover && 
               <motion.div className="mood-select-text" 

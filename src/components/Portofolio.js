@@ -1,14 +1,13 @@
-import './CSS/Portofolio.css'
 import tarot1 from '../images/tarot-reader-scrn1.png';
 import twerp1 from '../images/twerp-scrn1.png';
 import ghostbuster1 from  '../images/ghost-buster-scrn1.png';
-
+import "./CSS/Portofolio.css"
 import { motion} from "framer-motion"
 import { useEffect, useState} from 'react';
 
 const Twerp =
-    [1, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>
-            <a href='https://github.com/LucasCNordstrom/Loop5FinalProject' target="_blank" rel='noreferrer' className='project-card-flex'>
+    [1, <motion.section className='portofolio__list__card' whileHover={{ scale: 1.1 }}>
+            <a href='https://github.com/LucasCNordstrom/Loop5FinalProject' target="_blank" rel='noreferrer' className='portofolio__list__card__text'>
                 <h3 className='project-card-title'>Twerp</h3>
                 <h5>Final group project for Salt's curriculum</h5>
                 <h5>Webapp for storing and tracking perishables's expiration date.</h5>
@@ -17,21 +16,21 @@ const Twerp =
         </motion.section>]
 
 const Tarot =
-    [2, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>
-            <a href='https://github.com/Laura-Foxey/tarotReader' target="_blank" rel='noreferrer' className='project-card-flex'>
+    [2, <motion.section className='portofolio__list__card' whileHover={{ scale: 1.1 }}>
+            <a href='https://github.com/Laura-Foxey/tarotReader' target="_blank" rel='noreferrer' className='portofolio__list__card__text'>
                 <h3 className='project-card-title'>Tarot Reader</h3>
-                <h5>Hackday project built in 24h</h5>
+                <h5>Hackday project at Salt built in about 24h</h5>
                 <h5>Webapp in the style of a game to simulate having your cards read.</h5>
                 <img src={tarot1} alt="twerp-prntscreen"/>
             </a>
         </motion.section>]
 
 const Ghostbuster =
-        [3, <motion.section className='project-card' whileHover={{ scale: 1.1 }}>    
-                <a href='https://github.com/Laura-Foxey/Ghost-Buster' target="_blank" rel='noreferrer' className='project-card-flex'>
+        [3, <motion.section className="portofolio__list__card" whileHover={{ scale: 1.1 }}>    
+                <a href='https://github.com/Laura-Foxey/Ghost-Buster' target="_blank" rel='noreferrer' className='portofolio__list__card__text'>
                     <h3 className='project-card-title'>Ghost Buster</h3>
-                    <h5>Windows Forms game in C#</h5>
-                    <h5>Shoot ghosts with this simple game and try not to die!</h5>
+                    <h5>Game built in Windows Forms and C#</h5>
+                    <h5>Shoot ghosts with this simple arrow keys game and try not to die!</h5>
                     <img src={ghostbuster1} alt="twerp-prntscreen"/>
                 </a>
         </motion.section>]
@@ -78,7 +77,7 @@ function Portofolio({direction}) {
             initial= {{x: direction > 0 ? -100: 100}}
             animate={{x: 0, opacity: 1}}
             >
-                <ul className='slider-box'>
+                <ul className="portofolio__list">
                     {array.map(x =>
                     (<motion.li key={x[0]}
                         layout

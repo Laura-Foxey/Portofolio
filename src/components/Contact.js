@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './CSS/Contact.css';
 import { motion } from "framer-motion";
-import { SERVICE_CODE, TEMPLATE_CODE, FORM_CODE} from './../../secrets';
+import { SERVICE_CODE, TEMPLATE_CODE, FORM_CODE} from './../secrets';
+import './CSS/Contact.css'
 
 function Contact({direction}) {
     const form = useRef();
@@ -35,6 +35,7 @@ function Contact({direction}) {
         initial= {{x: direction > 0 ? -100: 100}}
         animate={{x: 0, opacity: 1}}
         >
+            <p>Make this the start of something incredible...</p>
             <form id="contact-form" ref={form} onSubmit={sendEmail}>
                 <label>
                 <input type="text" name="Name" required={true} placeholder='Name'/>
@@ -60,7 +61,7 @@ function Contact({direction}) {
 
                 <input id="submit-btn" type="submit" value="Send message" />
             </form>
-            <section className='contact-links'>
+            <section className='contact__links'>
                 <a href="https://www.linkedin.com/in/laura-gheorghe-107047244/" target="_blank" rel='noreferrer'>
                     <motion.img className="color-recolor" src="https://cdn-icons-png.flaticon.com/512/3536/3536569.png" whileHover={{ scale: 1.2 }}/>
                 </a>
