@@ -1,12 +1,13 @@
 import './App.css';
 import { BrowserRouter} from "react-router-dom";
+import { motion } from "framer-motion"
 import Navbar from './components/Navbar';
 import Routing from './components/Routing';
 import { useState, useEffect } from 'react';
 import Mood from './components/Mood';
 
 function App() {
-	const [mood, setMood] = useState();
+	const [mood, setMood] = useState('');
 
 	const headTag = document.getElementsByTagName('head')[0];
   const styleTag = document.createElement("style");
@@ -73,9 +74,12 @@ function App() {
     selectMood();
   }, [mood, headTag, styleTag])
 
-	console.log(mood);
+  const variants = {
+    initial: { y: 0, opacity: 1 },
+    animate: { y: 300, opacity: 0 }
+  };
 
-	if (!mood) return (<Mood setMood={setMood}/>)
+	if (!mood) return (<Mood setMood={setMood} />)
 
 	return (
 	<BrowserRouter>

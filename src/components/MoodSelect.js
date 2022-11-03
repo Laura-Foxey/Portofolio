@@ -15,12 +15,27 @@ const variants = {
       transition: {
         ease: "easeInOut"
       }
+    },
+    initial: {
+      scale: 0
+    },
+    grow: {
+      scale: 30
     }
   };
 
-
-function MoodSelect({text, name, setMood, moodName}) {
+function MoodSelect({text, name, setMood, moodName, bg}) {
     const [hover, setHover] = useState(false);
+    const [anim, setAnim] = useState(false);
+
+    const moodSelect = () => {
+      const timer = setTimeout(() => {
+        setAnim(false);
+        setMood(moodName);
+    }, 300);
+    setAnim(true);
+    return () => clearTimeout(timer);
+    }
 
     return (
         <li>
@@ -29,9 +44,11 @@ function MoodSelect({text, name, setMood, moodName}) {
               whileTap={{ scale: 0.8 }} variants={variants} 
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
-              onClick={() => setMood(moodName)}
+              onClick={() => moodSelect()}
               className={name}>
             </motion.div>
+            { anim && <motion.div className="growing-circle" style={{backgroundColor: bg}}variants={variants} animate={anim ? "grow" : "initial"}></motion.div> }
+
               {hover && 
               <motion.div className="mood-select-text" 
               layout 

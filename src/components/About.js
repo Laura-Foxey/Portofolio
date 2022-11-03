@@ -38,7 +38,7 @@ function About({direction}) {
                     <h2>Greetings, traveler!</h2>
                     <h3> It's no coincidence you are here, and our paths connected.</h3>
                     <div className="about__text__div">
-                        <p>Pleasure to meet you, I'm <b className='complementary-color' onClick={() => animateClick()}>Laura</b>! A drifter in this wast world of knowledge, 
+                        <p>Pleasure to meet you, I'm <b className='complementary-color' onClick={() => animateClick()}>Laura</b>! A drifter in this vast world of knowledge, 
                         on a journey of finding that something to make my own.</p>
                         <p>I dream to be part of an amazing team that will help me unleash my full potential so I can become
                             a confident developer, and in return contribute with my newfound knowledge. </p>
