@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter} from "react-router-dom";
-import { motion } from "framer-motion"
 import Navbar from './components/Navbar';
 import Routing from './components/Routing';
 import { useState, useEffect } from 'react';
@@ -73,11 +72,6 @@ function App() {
   
     selectMood();
   }, [mood, headTag, styleTag])
-
-  const variants = {
-    initial: { y: 0, opacity: 1 },
-    animate: { y: 300, opacity: 0 }
-  };
 
 	if (!mood) return (<Mood setMood={setMood} />)
 
