@@ -7,6 +7,7 @@ import Mood from './components/Mood';
 
 function App() {
 	const [mood, setMood] = useState('');
+  const [loading, setLoading] = useState(true);
 
 	const headTag = document.getElementsByTagName('head')[0];
   const styleTag = document.createElement("style");
@@ -34,7 +35,7 @@ function App() {
       if (mood === 'relaxed') {
         styleTag.innerHTML = `
         :root {
-          --background-color: #ff8e38;
+          --background-color: #ff8121;
           --dark-color: #f27928;
           --light-color: #ffc94a;
           --contrast-color: #38ff8e;
@@ -59,7 +60,7 @@ function App() {
         }
   
         .color-recolor {
-          filter: invert(43%) sepia(6%) saturate(2534%) hue-rotate(221deg) brightness(95%) contrast(91%);
+          filter: invert(68%) sepia(92%) saturate(1079%) hue-rotate(203deg) brightness(79%) contrast(85%);  
         }
   
         .contrast-recolor {
@@ -67,20 +68,26 @@ function App() {
         }
         `;
       }
+      if (!mood) {
+        return;
+      };
       headTag.appendChild(styleTag);
+      setLoading(false);
     }
   
     selectMood();
   }, [mood, headTag, styleTag])
 
+
 	if (!mood) return (<Mood setMood={setMood} />)
+  if (loading) return (<p>Loading...</p>)
 
 	return (
 	<BrowserRouter>
-		<Navbar />
+		<Navbar /> 
 		<div className='grid'>
-			<Routing mood={mood}/>
-		</div>
+			<Routing mood={mood}/> 
+		</div> 
 	</BrowserRouter>
   );
 }

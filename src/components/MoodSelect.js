@@ -17,10 +17,13 @@ const variants = {
       }
     },
     initial: {
-      scale: 0
+      scale: 0,
+      opacity: 0
     },
     grow: {
-      scale: 30
+      scale: 25,
+      opacity: 1,
+      duration: 2
     }
   };
 
@@ -30,9 +33,9 @@ function MoodSelect({text, name, setMood, moodName, bg}) {
 
     const moodSelect = () => {
       const timer = setTimeout(() => {
-        setAnim(false);
         setMood(moodName);
-    }, 300);
+        setAnim(false);
+    }, 500);
     setAnim(true);
     return () => clearTimeout(timer);
     }
