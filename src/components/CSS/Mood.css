@@ -55,5 +55,12 @@
     margin: 5vh;
     top: 30%;
     z-index: 1;
+  }
 
+  @media only screen and (max-width: 700px) {
+    .dot {
+      height: 11vh;
+      width: 11vh;
+      margin: 2vh;
+    }
   }

@@ -75,6 +75,7 @@
         margin: 3vh 0;
         background-color: var(--light-color);
         color: var(--background-color);
+        box-shadow: var(--light-color) 0 13px 27px -5px,rgba(0,0,0,.3) 0 8px 16px -8px;
         border-radius: 15px;
     }
 
